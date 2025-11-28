@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neo City Dark Mode */
+    --background: 240 20% 10%; /* #14141f - Deep Blue/Black */
+    --foreground: 220 14% 96%;
+    
+    --card: 240 20% 15%;
+    --card-foreground: 220 14% 96%;
+    
+    --popover: 240 20% 12%;
+    --popover-foreground: 220 14% 96%;
+    
+    --primary: 180 100% 50%; /* #00ffff - Neon Cyan */
+    --primary-foreground: 240 20% 10%;
+    
+    --secondary: 320 100% 50%; /* #ff0080 - Neon Pink */
+    --secondary-foreground: 220 14% 96%;
+    
+    --muted: 240 20% 20%;
+    --muted-foreground: 220 14% 70%;
+    
+    --accent: 280 100% 60%; /* #aa00ff - Neon Purple */
+    --accent-foreground: 220 14% 96%;
+    
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 220 14% 96%;
+    
+    --border: 240 20% 25%;
+    --input: 240 20% 25%;
+    --ring: 180 100% 50%;
+    
+    --radius: 0.5rem;
+
+    /* Custom Tech Colors */
+    --tech-blue: 180 100% 50%;
+    --tech-purple: 280 100% 60%;
+    --tech-green: 120 100% 50%;
+    --tech-yellow: 60 100% 50%;
+    --tech-cyan: 190 100% 50%;
+  }
+
+  .light {
+    /* Light Mode */
+    --background: 220 14% 96%;
+    /* #fafafa */
+    --foreground: 220 13% 18%;
+    /* #282c34 */
+
+    --card: 0 0% 100%;
+    /* #ffffff */
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 207 90% 45%;
+    /* Darker Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 286 60% 50%;
+    /* Darker Purple */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 90%;
+    --muted-foreground: 220 13% 40%;
+
+    --accent: 95 38% 45%;
+    /* Darker Green */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 355 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 85%;
+    --input: 220 13% 85%;
+    --ring: 207 90% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-transparent text-foreground transition-colors duration-300;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    /* Tech font */
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .text-glow-blue {
+    text-shadow: 0 0 10px hsl(var(--tech-blue)), 0 0 20px hsl(var(--tech-blue));
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px hsl(var(--tech-purple)), 0 0 20px hsl(var(--tech-purple));
+  }
+
+  .box-glow {
+    box-shadow: 0 0 15px rgba(97, 175, 239, 0.3);
+    /* Blue glow */
+  }
+
+  .box-glow-hover:hover {
+    box-shadow: 0 0 25px rgba(97, 175, 239, 0.5);
+  }
+
+  .glass-panel {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .tech-border {
+    @apply border border-border relative;
+  }
+
+  .tech-border::before {
+    content: '';
+    @apply absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-primary;
+  }
+
+  .tech-border::after {
+    content: '';
+    @apply absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-primary;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+  @keyframes grid-move {
+    0% {
+      transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+
+    100% {
+      transform: perspective(500px) rotateX(60deg) translateY(40px);
+    }
+  }
+
+  @keyframes city-scroll {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: -1000px 0;
+    }
+  }
+
+  @keyframes twinkle {
+
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scale(0.8);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  .animate-float {
+    animation: float linear infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-grid {
+    animation: grid-move 2s linear infinite;
+  }
+
+  .animate-city {
+    animation: city-scroll 60s linear infinite;
+  }
+}
