@@ -132,7 +132,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             onSubmit={handleSubmit}
-            className="space-y-6 bg-card p-8 rounded-3xl shadow-lg border border-border/50"
+            className="space-y-6 bg-card p-6 md:p-8 rounded-3xl shadow-lg border border-border/50"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">

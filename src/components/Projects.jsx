@@ -127,7 +127,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="p-6 space-y-4 flex-1 flex flex-col">
+              <div className="p-4 md:p-6 space-y-4 flex-1 flex flex-col">
                 <div>
                   <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
                     {project.title}

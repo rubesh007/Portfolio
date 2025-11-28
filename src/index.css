@@ -86,8 +86,11 @@
     @apply border-border;
   }
 
+  html {
+    @apply bg-background;
+  }
   body {
-    @apply bg-transparent text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground transition-colors duration-300 min-h-screen overflow-x-hidden;
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     /* Tech font */
   }

@@ -39,7 +39,7 @@ const Experience = () => {
 
         <div className="relative max-w-3xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border"></div>
+          <div className="hidden md:block absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-border"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -49,10 +49,10 @@ const Experience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="relative pl-24"
+                className="relative md:pl-24"
               >
                 {/* Timeline Icon */}
-                <div className="absolute left-0 top-0 p-2 bg-background border border-border rounded-full z-10 group hover:border-primary transition-colors">
+                <div className="hidden md:block absolute left-0 top-0 p-2 bg-background border border-border rounded-full z-10 group hover:border-primary transition-colors">
                   {exp.type === 'commit' && <GitCommit className="text-primary" size={24} />}
                   {exp.type === 'merge' && <GitMerge className="text-secondary" size={24} />}
                   {exp.type === 'branch' && <GitBranch className="text-accent" size={24} />}
@@ -61,7 +61,7 @@ const Experience = () => {
                 {/* Content Card */}
                 <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 relative group">
                   {/* Connector Line */}
-                  <div className="absolute top-6 -left-16 w-16 h-0.5 bg-border group-hover:bg-primary/50 transition-colors"></div>
+                  <div className="hidden md:block absolute top-6 -left-16 w-16 h-0.5 bg-border group-hover:bg-primary/50 transition-colors"></div>
 
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                     <div>

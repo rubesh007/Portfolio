@@ -51,7 +51,7 @@ const Header = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </a>
           ))}
-          
+
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-muted transition-colors text-foreground"
@@ -69,7 +69,7 @@ const Header = () => {
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          
+
           <button
             className="p-2 hover:bg-muted rounded-full transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -88,15 +88,15 @@ const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-lg overflow-hidden"
           >
-            <div className="flex flex-col p-6 space-y-4">
+            <div className="flex flex-col p-6 space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium hover:text-primary transition-colors"
+                  className="text-lg font-medium hover:text-primary transition-colors flex items-center gap-3"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <span className="text-primary mr-2">0{navLinks.indexOf(link) + 1}.</span>
+                  <span className="text-primary text-sm font-mono">0{navLinks.indexOf(link) + 1}.</span>
                   {link.name}
                 </a>
               ))}

@@ -132,7 +132,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block"
+            className="relative hidden md:block lg:block mt-12 lg:mt-0"
           >
             <div className="relative rounded-xl bg-[#1e1e1e] border border-border shadow-2xl overflow-hidden">
               {/* Terminal Header */}

@@ -80,7 +80,7 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative z-10 w-64 md:w-72"
+              className="relative z-10 w-full max-w-[280px] md:w-72"
             >
               {/* Tech Border Frame */}
               <div className="absolute -inset-4 border-2 border-dashed border-border rounded-xl animate-[spin_10s_linear_infinite]"></div>
@@ -104,13 +104,13 @@ const About = () => {
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -left-2 md:-left-8 top-8 bg-card border border-border p-2.5 rounded-lg shadow-xl flex items-center gap-3 z-20"
+                className="absolute -left-4 md:-left-8 top-4 md:top-8 bg-card border border-border p-2 md:p-2.5 rounded-lg shadow-xl flex items-center gap-2 md:gap-3 z-20 scale-90 md:scale-100"
               >
-                <div className="p-2 bg-primary/10 rounded-md text-primary">
-                  <Layout size={18} />
+                <div className="p-1.5 md:p-2 bg-primary/10 rounded-md text-primary">
+                  <Layout size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold">Frontend</div>
+                  <div className="text-[10px] md:text-xs font-bold">Frontend</div>
                 </div>
               </motion.div>
 
@@ -119,13 +119,13 @@ const About = () => {
                 initial={{ x: 20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="absolute -right-2 md:-right-8 top-8 bg-card border border-border p-2.5 rounded-lg shadow-xl flex items-center gap-3 z-20"
+                className="absolute -right-4 md:-right-8 top-12 md:top-8 bg-card border border-border p-2 md:p-2.5 rounded-lg shadow-xl flex items-center gap-2 md:gap-3 z-20 scale-90 md:scale-100"
               >
-                <div className="p-2 bg-[#61DAFB]/10 rounded-md text-[#61DAFB]">
-                  <FaReact size={18} />
+                <div className="p-1.5 md:p-2 bg-[#61DAFB]/10 rounded-md text-[#61DAFB]">
+                  <FaReact size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold">MERN Stack</div>
+                  <div className="text-[10px] md:text-xs font-bold">MERN Stack</div>
                 </div>
               </motion.div>
 
@@ -134,13 +134,13 @@ const About = () => {
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="absolute -left-2 md:-left-8 bottom-8 bg-card border border-border p-2.5 rounded-lg shadow-xl flex items-center gap-3 z-20"
+                className="absolute -left-4 md:-left-8 bottom-12 md:bottom-8 bg-card border border-border p-2 md:p-2.5 rounded-lg shadow-xl flex items-center gap-2 md:gap-3 z-20 scale-90 md:scale-100"
               >
-                <div className="p-2 bg-[#DD0031]/10 rounded-md text-[#DD0031]">
-                  <FaAngular size={18} />
+                <div className="p-1.5 md:p-2 bg-[#DD0031]/10 rounded-md text-[#DD0031]">
+                  <FaAngular size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold">MEAN Stack</div>
+                  <div className="text-[10px] md:text-xs font-bold">MEAN Stack</div>
                 </div>
               </motion.div>
 
@@ -149,13 +149,13 @@ const About = () => {
                 initial={{ x: 20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -right-2 md:-right-8 bottom-8 bg-card border border-border p-2.5 rounded-lg shadow-xl flex items-center gap-3 z-20"
+                className="absolute -right-4 md:-right-8 bottom-4 md:bottom-8 bg-card border border-border p-2 md:p-2.5 rounded-lg shadow-xl flex items-center gap-2 md:gap-3 z-20 scale-90 md:scale-100"
               >
-                <div className="p-2 bg-foreground/10 rounded-md text-foreground">
-                  <RiNextjsFill size={18} />
+                <div className="p-1.5 md:p-2 bg-foreground/10 rounded-md text-foreground">
+                  <RiNextjsFill size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold">Next.js</div>
+                  <div className="text-[10px] md:text-xs font-bold">Next.js</div>
                 </div>
               </motion.div>
             </motion.div>
