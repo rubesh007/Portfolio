@@ -9,16 +9,28 @@ const Experience = () => {
       role: "Software Developer – R&D Team",
       duration: "Sep 2025 - Present",
       location: "Chennai, TamilNadu",
-      description: "Working as a Frontend Developer using Angular. Developing scalable UI components, improving application performance, and contributing to product research and new feature prototypes within the R&D team.",
+      description: [
+        "Working as a Frontend Developer using Angular, contributing to the Cybot project.",
+        "Developing scalable UI components and improving application performance within the R&D team.",
+        "Contributing to product research and new feature prototypes.",
+        "Built responsive user interfaces using HTML5, CSS3, JavaScript, React, Tailwind CSS, and Bootstrap.",
+        "Collaborated with UI/UX and backend teams to build modular, high-performance components."
+      ],
       type: "commit"
     },
     {
-      company: "Vizion Systems",
+      company: " Vizion Systems",
       role: "Full Stack Developer / Frontend Developer",
       duration: "July 2023 - July 2024",
       location: "Bengaluru, Karnataka",
-      description: "Front-End Developer involved in projects utilizing Html5, Css3, Bootstrap, JavaScript and React. Led a 3-member development team to successfully deliver scalable MERN stack applications within deadlines. Deployed a Management App on Vercel, ensuring high performance, security, and smooth CI/CD workflows. Optimized React components and improved application load speed by ~30%, enhancing overall user experience. Integrated RESTful APIs & role-based authentication that streamlined data flow and improved security in projects.",
-      type: "merge"
+      description: [
+        "Key contributor to the Servo Desk project, a comprehensive service management solution.",
+        "Developed responsive front-end interfaces utilizing HTML5, CSS3, Bootstrap, and React.",
+        "Implemented role-based authentication and secure data flow using RESTful APIs.",
+        "Optimized application performance and ensured cross-browser compatibility.",
+        "Collaborated in an Agile environment to deliver features on time."
+      ],
+      type: "commit"
     }
   ];
 
@@ -77,9 +89,13 @@ const Experience = () => {
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground leading-relaxed">
-                    {exp.description}
-                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                    {exp.description.map((item, i) => (
+                      <li key={i} className="leading-relaxed">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}

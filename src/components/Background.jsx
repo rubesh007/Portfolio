@@ -5,7 +5,7 @@ const Background = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden bg-background transition-colors duration-500">
+    <div className="fixed inset-0 z-0 overflow-hidden transition-colors duration-500 pointer-events-none">
       {/* Stars */}
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
@@ -47,7 +47,7 @@ const Background = () => {
       </div>
 
       {/* City Skyline (CSS Art) */}
-      <div className="absolute bottom-[15%] left-0 w-full h-[150px] flex items-end justify-center opacity-80">
+      <div className="absolute bottom-[15%] left-0 w-full h-[150px] flex items-end justify-center opacity-100">
          {/* Simple blocks representing buildings */}
          <div className={`w-[5%] h-[60%] mx-1 ${theme === 'dark' ? 'bg-[#0a0a15]' : 'bg-gray-300'}`}></div>
          <div className={`w-[8%] h-[80%] mx-1 ${theme === 'dark' ? 'bg-[#0f0f20]' : 'bg-gray-400'}`}></div>
@@ -58,9 +58,6 @@ const Background = () => {
          <div className={`w-[12%] h-[85%] mx-1 ${theme === 'dark' ? 'bg-[#141425]' : 'bg-gray-500'}`}></div>
          <div className={`w-[6%] h-[60%] mx-1 ${theme === 'dark' ? 'bg-[#0f0f20]' : 'bg-gray-400'}`}></div>
       </div>
-      
-      {/* Overlay Gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-80 pointer-events-none"></div>
     </div>
   );
 };
