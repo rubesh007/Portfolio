@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { GitCommit, GitBranch, GitMerge, Calendar } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { GitCommit, GitBranch, GitMerge, Calendar } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -10,13 +10,12 @@ const Experience = () => {
       duration: "Sep 2025 - Present",
       location: "Chennai, TamilNadu",
       description: [
-        "Working as a Frontend Developer using Angular, contributing to the Cybot project.",
-        "Developing scalable UI components and improving application performance within the R&D team.",
-        "Contributing to product research and new feature prototypes.",
-        "Built responsive user interfaces using HTML5, CSS3, JavaScript, React, Tailwind CSS, and Bootstrap.",
-        "Collaborated with UI/UX and backend teams to build modular, high-performance components."
+        "Frontend Developer using Angular (v16-19), contributing to the Cybot project and R&D initiatives.",
+        "Migrated dashboard from Angular 16 to 19, ensuring zero breaking changes and improved performance.",
+        "Built scalable, responsive UI components using HTML5, SCSS, and Angular Material.",
+        "Collaborated with cross-functional teams to deliver high-quality features and prototypes."
       ],
-      type: "commit"
+      type: "commit",
     },
     {
       company: " Vizion Systems",
@@ -24,13 +23,12 @@ const Experience = () => {
       duration: "July 2023 - July 2024",
       location: "Bengaluru, Karnataka",
       description: [
-        "Key contributor to the Servo Desk project, a comprehensive service management solution.",
-        "Developed responsive front-end interfaces utilizing HTML5, CSS3, Bootstrap, and React.",
-        "Implemented role-based authentication and secure data flow using RESTful APIs.",
-        "Optimized application performance and ensured cross-browser compatibility.",
-        "Collaborated in an Agile environment to deliver features on time."
+        "Key contributor to Servo Desk, developing responsive interfaces with React, Bootstrap, and Tailwind.",
+        "Implemented secure role-based authentication and optimized RESTful API data flow.",
+        "Enhanced application performance and ensured seamless cross-browser compatibility.",
+        "Delivered critical features within Agile timelines, focusing on code quality and maintainability."
       ],
-      type: "commit"
+      type: "commit",
     }
   ];
 
@@ -65,9 +63,15 @@ const Experience = () => {
               >
                 {/* Timeline Icon */}
                 <div className="hidden md:block absolute left-0 top-0 p-2 bg-background border border-border rounded-full z-10 group hover:border-primary transition-colors">
-                  {exp.type === 'commit' && <GitCommit className="text-primary" size={24} />}
-                  {exp.type === 'merge' && <GitMerge className="text-secondary" size={24} />}
-                  {exp.type === 'branch' && <GitBranch className="text-accent" size={24} />}
+                  {exp.type === "commit" && (
+                    <GitCommit className="text-primary" size={24} />
+                  )}
+                  {exp.type === "merge" && (
+                    <GitMerge className="text-secondary" size={24} />
+                  )}
+                  {exp.type === "branch" && (
+                    <GitBranch className="text-accent" size={24} />
+                  )}
                 </div>
 
                 {/* Content Card */}
@@ -80,8 +84,12 @@ const Experience = () => {
                       <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {exp.role}
                       </h3>
-                      <div className="text-primary font-medium">{exp.company}</div>
-                      <div className="text-sm text-muted-foreground mt-1">{exp.location}</div>
+                      <div className="text-primary font-medium">
+                        {exp.company}
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-1">
+                        {exp.location}
+                      </div>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/10 px-3 py-1 rounded-full w-fit">
                       <Calendar size={14} />
@@ -90,11 +98,7 @@ const Experience = () => {
                   </div>
 
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    {exp.description.map((item, i) => (
-                      <li key={i} className="leading-relaxed">
-                        {item}
-                      </li>
-                    ))}
+                    {exp.description}
                   </ul>
                 </div>
               </motion.div>

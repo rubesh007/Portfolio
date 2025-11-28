@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "Cybot",
       role: "Frontend Developer (Angular)",
-      description: "Built responsive, production-ready UI screens using Angular 16–19, TypeScript, SCSS, and Angular Material. Migrated the entire dashboard from Angular 16 to Angular 19, ensuring zero-breaking changes and improved performance. Redesigned the old UI into a modern, optimized layout and fixed major mobile responsiveness issues.",
+      description: "Migrated and optimized a high-performance dashboard using Angular 16-19, TypeScript, and SCSS. Redesigned the UI for a seamless, responsive experience across all devices, resolving key usability issues. Enhanced performance by optimizing change detection, significantly reducing load times. Collaborated with R&D and QA teams to deliver reliable features within Agile workflows.",
       tags: ["Angular 19", "TypeScript", "SCSS", "Angular Material"],
       image: "/images/cybot_dashboard.png",
       github: "#",
@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: "Cricket Bat Selection App",
       role: "Next.js Developer",
-      description: "Built a fully responsive cricket bat selection web app using Next.js, TypeScript, and Tailwind CSS. Implemented register and login functionality with secure password hashing. Designed realistic bat recommendation logic and an interactive two-bat comparison system.",
+      description: "Built a responsive bat selection app using Next.js, TypeScript, and Tailwind CSS with secure authentication. Designed an interactive comparison tool and recommendation logic to guide user choices. Implemented React Context for efficient state management and a premium UI. Ensured a seamless experience with optimized performance and intuitive navigation.",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Context API"],
       image: "/images/cricket_bat_app.png",
       github: "https://github.com/rubesh007/BatSelector",
@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: "Servo Desk",
       role: "Front-End Developer",
-      description: "Built responsive user interfaces using React, Tailwind CSS, and Bootstrap. Developed reusable UI components using React Hooks. Integrated RESTful APIs for dynamic data rendering. Added dark/light mode toggle and optimized performance.",
+      description: "Built a comprehensive service management solution using React, Tailwind CSS, and Bootstrap. Developed reusable, modular components with React Hooks for maintainability. Integrated RESTful APIs for secure data handling and role-based authentication. Optimized performance and accessibility, featuring a custom dark/light mode toggle.",
       tags: ["React", "Tailwind CSS", "Bootstrap", "REST APIs"],
       image: "/images/servodesk_ui.png",
       github: "#",
@@ -40,7 +40,7 @@ const Projects = () => {
     {
       title: "Management System Web App",
       role: "MERN Stack Developer",
-      description: "Designed a clean, responsive ticket management UI using React and Tailwind CSS. Created role-based views for Users and Admins. Backend planned with Node.js, Express, MongoDB, and JWT for authentication & persistent data handling.",
+      description: "Engineered a responsive ticket management system using React and Tailwind CSS with a clean UI. Implemented secure role-based access for ticket tracking and status updates. Built reusable UI elements to maintain design consistency across the application. Architected a robust Node.js/Express/MongoDB backend with JWT authentication.",
       tags: ["React", "Node.js", "Express", "MongoDB"],
       image: "/images/management_system.png",
       github: "https://github.com/rubesh007/ManageMent-System",
