@@ -136,32 +136,34 @@ const Contact = () => {
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium ml-1">Name</label>
+                <label htmlFor="name" className="text-sm font-medium ml-1">Name <span className="text-red-500">*</span></label>
                 <input
                   id="name"
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Name"
                   className={`w-full px-4 py-3 rounded-xl border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all ${errors.name ? 'border-red-500' : ''}`}
+                  required
                 />
                 {errors.name && <span className="text-xs text-red-500 ml-1">{errors.name}</span>}
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium ml-1">Email</label>
+                <label htmlFor="email" className="text-sm font-medium ml-1">Email <span className="text-red-500">*</span></label>
                 <input
                   id="email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
+                  placeholder="email@example.com"
                   className={`w-full px-4 py-3 rounded-xl border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all ${errors.email ? 'border-red-500' : ''}`}
+                  required
                 />
                 {errors.email && <span className="text-xs text-red-500 ml-1">{errors.email}</span>}
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="subject" className="text-sm font-medium ml-1">Subject</label>
+              <label htmlFor="subject" className="text-sm font-medium ml-1">Subject <span className="text-red-500">*</span></label>
               <input
                 id="subject"
                 type="text"
@@ -169,11 +171,12 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Project Inquiry"
                 className={`w-full px-4 py-3 rounded-xl border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all ${errors.subject ? 'border-red-500' : ''}`}
+                required
               />
               {errors.subject && <span className="text-xs text-red-500 ml-1">{errors.subject}</span>}
             </div>
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium ml-1">Message</label>
+              <label htmlFor="message" className="text-sm font-medium ml-1">Message <span className="text-red-500">*</span></label>
               <textarea
                 id="message"
                 rows={4}
@@ -181,6 +184,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Tell me about your project..."
                 className={`w-full px-4 py-3 rounded-xl border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none ${errors.message ? 'border-red-500' : ''}`}
+                required
               ></textarea>
               {errors.message && <span className="text-xs text-red-500 ml-1">{errors.message}</span>}
             </div>
