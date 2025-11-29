@@ -9,12 +9,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-neon-cyan/20 py-12 relative overflow-hidden">
+    <footer className="bg-background border-neon-cyan/20 pt-8 pb-8 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-neon-cyan/5 via-background to-background pointer-events-none"></div>
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left relative z-10">
           <p className="font-bold text-lg text-glow-cyan">
-            Rubesh<span className="text-neon-cyan">.</span>
+            RubeshKumar<span className="text-neon-cyan">.S</span>
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             © {new Date().getFullYear()} All rights reserved.
